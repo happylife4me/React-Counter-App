@@ -11,9 +11,19 @@ import logger from "redux-logger"
 
 import counterAppReducer from "./Reducers/index"
 
-const store = createStore(counterAppReducer, composeWithDevTools(applyMiddleware(logger)))
+const firstState = {
+    employess : [],
+    error : "",
+    counter : 0
+}
+
+
+const store = createStore(counterAppReducer,firstState, composeWithDevTools(applyMiddleware(logger)))
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+
+// axios.get("http://dummy.restapiexample.com/api/v1/employees")
+//     .then(json => console.log(json.data))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

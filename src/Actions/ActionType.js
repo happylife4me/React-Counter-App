@@ -1,2 +1,7 @@
 export const ADD_COUNTER = "ADD_COUNTER"
 export const REMOVE_COUNTER = "REMOVE_COUNTER"
+
+export const SAVE_COMMENT = "SAVE_COMMENT"
+
+export const GET_EMPLOYEE = "GET_EMPLOYEE"
+export const ERROR_GET_EMPLOYEE ="ERROR_GET_EMPLOYEE"

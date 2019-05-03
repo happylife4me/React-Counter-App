@@ -1,11 +1,13 @@
 import * as ActionType from  "../Actions/ActionType"
 
-export const CounterReducer = (state = 0, action) => {
+export const CounterReducer = (state, action) => {
     switch (action.type) {
         case ActionType.ADD_COUNTER:
-            return state + action.payload
+            state.counter  = state.counter+ action.payload
+            break
         case ActionType.REMOVE_COUNTER:
-            return state - action.payload
+            state.counter =  state.counter- action.payload
+            break
     }
     return state
 }
